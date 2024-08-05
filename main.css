@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: scroll;
+}
+.logo_name {
+  background-color: rgb(5, 129, 136);
+  padding: 10px 0;
+}
+#company_name_input {
+  color: #ffffff;
+  padding: 10px;
+  margin-left: 40px;
+  font-size: 18px;
+  border: 1px solid rgb(17, 154, 161);
+  background-color: transparent;
+  outline: none;
+}
+section {
+  background-color: rgb(8, 154, 162);
+  padding-top: 30px;
+  height: 100vh;
+  overflow-x: scroll;
+  padding-bottom: 200px;
+}
+.main-grid-container {
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  overflow: auto;
+  padding: 0 10px;
+}
+.main-grid-item {
+  list-style: none;
+  background-color: rgb(217, 217, 217);
+  border-radius: 5px;
+  padding: 15px;
+  margin-right: 30px;
+  min-width: 300px;
+}
+.item-header {
+  display: flex;
+  justify-content: space-between;
+}
+.close-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.fa-xmark {
+  font-size: 25px;
+  color: red;
+}
+.inside-flex-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.inside-flex-item {
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+}
+.inside-item-text {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 25px;
+  outline: none;
+  border: none;
+}
+.inside-item-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inside-info {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+.inside-info li img {
+  width: 20px;
+  height: 20px;
+}
+.inside-info-gender {
+  width: 40px;
+  height: 40px;
+}
+.add_list_btn {
+  min-width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.list_name_input {
+  outline: none;
+  font-size: 20px;
+  background-color: transparent;
+  border: 1px solid rgb(189, 187, 187);
+  padding: 5px;
+}
+.add_line_btn {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.add_line_btn:hover {
+  background-color: rgb(8, 154, 162);
+  border: 1px solid rgb(8, 154, 162);
+  color: white;
+}
+.close-line {
+  background: transparent;
+  border: 1px solid red;
+  color: red;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 3px;
+  cursor: pointer;
+}
+.close-line:hover {
+  background-color: red;
+  color: white;
+}
