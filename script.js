@@ -10,7 +10,6 @@ let counter = 1;
 function addNewList() {
   let main_grid_item = document.createElement("li");
   main_grid_item.className = "main-grid-item";
-  main_grid_item.id = `list_${counter.toString()}`;
 
   let item_header = document.createElement("div");
   item_header.className = "item-header";
@@ -50,21 +49,23 @@ function addNewList() {
   main_grid_item.insertAdjacentElement("afterend", add_list_btn);
 
 
-  let list = { name: "", tasks: [] };
+  let list = { name: "", tasks: [], id: Math.floor(Math.random() * 101) };
   list_name_input.addEventListener("keyup", (e) => {
     if (e.code == "Enter") {
       list.name = e.currentTarget.value;
     }
   });
+  main_grid_item.setAttribute("id", `${list.id}`);
   lists.push(list);
   counter++;
 }
 
 let counterOfTask = 1;
 
-function addNewLine(el) {
+function addNewLine(el, id) {
   let inside_flex_item = document.createElement("li");
   inside_flex_item.className = "inside-flex-item";
+
 
   let close_line = document.createElement("button");
   close_line.className = "close-line";
@@ -78,6 +79,7 @@ function addNewLine(el) {
   text_area.className = "inside-item-text";
   text_area.id = `task_${counterOfTask.toString()}`;
   text_area.placeholder = " Enter text...";
+  
   text_area.onkeyup = function (ev) {
     if (ev.code == "Enter") {
       lists.map((list) => {
@@ -123,4 +125,12 @@ function addNewLine(el) {
 
   inside_flex_item.append(close_line);
   el.insertAdjacentElement("beforeend", inside_flex_item);
+
+  let idOfTaskList = inside_flex_item.parentElement.parentElement.id;
+  lists.forEach((list)=>{
+    if(idOfTaskList == list.id){
+      list.tasks.push(inside_flex_item);
+    }
+  })
+  console.log(lists);
 }
