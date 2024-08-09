@@ -4,7 +4,6 @@ const main_grid_container = document.getElementById("main-grid-container");
 const add_list_btn = document.querySelector(".add_list_btn");
 
 let lists = [];
-let list = { name: "", tasks: [] };
 
 let counter = 1;
 
@@ -50,6 +49,8 @@ function addNewList() {
   main_grid_container.append(main_grid_item);
   main_grid_item.insertAdjacentElement("afterend", add_list_btn);
 
+
+  let list = { name: "", tasks: [] };
   list_name_input.addEventListener("keyup", (e) => {
     if (e.code == "Enter") {
       list.name = e.currentTarget.value;
@@ -92,7 +93,6 @@ function addNewLine(el) {
     }
   };
 
-
   inside_flex_item.append(text_area);
 
   inside_flex_item.insertAdjacentHTML(
@@ -124,5 +124,3 @@ function addNewLine(el) {
   inside_flex_item.append(close_line);
   el.insertAdjacentElement("beforeend", inside_flex_item);
 }
-
-

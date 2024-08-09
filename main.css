@@ -47,7 +47,7 @@ section {
   margin-right: 30px;
   min-width: 300px;
   max-height: 700px;
-  overflow-y: auto !important;
+  overflow-y: auto;
 }
 .item-header {
   display: flex;
